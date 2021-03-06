@@ -110,7 +110,8 @@ def check(board,x,player):
             winner = player
             print("Player",winner,"wins!")
         else:
-            counter = "0""""
+            counter = "0"
+            """
 #game starts, empty set is written to disc
 emptyBoard(board)
 #board is drawn
