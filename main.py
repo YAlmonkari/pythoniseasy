@@ -97,7 +97,7 @@ def move(player,board):
         check(board,x,player)
 #chcek for the winning move
 def check(board,x,player):
-    #chcek if 0-3 1-4 2-5 3-6 is taken
+    #chcek if 0-3 1-4 2-5 3-6 is taken by players x-s or o-s.
     # 36-42, 29-35, 22-28, 15-21, 8-14, 1-7
     #dimentsions of a board
     rows = 6
