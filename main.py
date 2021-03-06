@@ -22,7 +22,7 @@ def emptyBoard(board):
     for i in range(5,-1,-1):
         #columns
         for j in range(7):                 #          |8 |9 |10|11|12|13|14|
-            board.append(i*7+j+1)              #i*7+j+1   |1 |2 |3 |4 |5 |6 |7 |
+            board.append(" ")              #i*7+j+1   |1 |2 |3 |4 |5 |6 |7 |
 #function drawing a connect 4 board (13 rows, 15 columns)
 def board4(rows, col, board):
     column=0
@@ -66,7 +66,7 @@ def move(player,board):
                     board[rows+x-1] = "x"
                 else:
                     board[rows+x-1] = "o"
-                check(board, x, player)
+        #        check(board, x, player)
             else:
                 while (board[rows+x-1] != " " and rows>=0):
                     rows -= 7
@@ -76,7 +76,7 @@ def move(player,board):
                         board[rows+x-1] = "x"
                     else:
                         board[rows+x-1] = "o"
-                    check(board, x, player)
+       #             check(board, x, player)
                 else:
                     #column is full.
                     print("Chose difrent column.")
@@ -94,8 +94,9 @@ def move(player,board):
         else:    
             player -= 1
         board4(13,15, board)
-        check(board,x,player)
+      #  check(board,x,player)
 #chcek for the winning move
+"""
 def check(board,x,player):
     winner = ""
     counter = 0
@@ -109,7 +110,7 @@ def check(board,x,player):
             winner = player
             print("Player",winner,"wins!")
         else:
-            counter = "0"
+            counter = "0""""
 #game starts, empty set is written to disc
 emptyBoard(board)
 #board is drawn
