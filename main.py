@@ -66,7 +66,7 @@ def move(player,board):
                     board[rows+x-1] = "x"
                 else:
                     board[rows+x-1] = "o"
-        #        check(board, x, player)
+                check(board, x, player)
             else:
                 while (board[rows+x-1] != " " and rows>=0):
                     rows -= 7
@@ -76,7 +76,7 @@ def move(player,board):
                         board[rows+x-1] = "x"
                     else:
                         board[rows+x-1] = "o"
-       #             check(board, x, player)
+                    check(board, x, player)
                 else:
                     #column is full.
                     print("Chose difrent column.")
@@ -94,24 +94,37 @@ def move(player,board):
         else:    
             player -= 1
         board4(13,15, board)
-      #  check(board,x,player)
+        check(board,x,player)
 #chcek for the winning move
-"""
 def check(board,x,player):
-    winner = ""
-    counter = 0
-    #row = 6
-    #col = 7
     #chcek if 0-3 1-4 2-5 3-6 is taken
-    for i in range(42):                     
-        # 36-42, 29-35, 22-28, 15-21, 8-14, 1-7
-        if board[i] == "x":
-            counter += 1
-            winner = player
-            print("Player",winner,"wins!")
+    # 36-42, 29-35, 22-28, 15-21, 8-14, 1-7
+    #dimentsions of a board
+    rows = 6
+    cols = 7
+    winner = ""
+    #counter for same dots in a row
+    counter = 0
+    #possition set to last row
+    possition = rows*(cols-1)
+ #  print(board[possition])
+    for j in range(4):
+        if counter < 4:
+            possition += j
+            for i in range(4):
+                if board[possition+i] == "x" and counter < 4:
+                    counter += 1
+ #                  print(counter)
+                else:
+                    counter = 0
+                    return False
+  
+        #counter is 4
         else:
-            counter = "0"
-            """
+            winner = player
+            print("Player",winner,"winns!")
+            return True
+            break
 #game starts, empty set is written to disc
 emptyBoard(board)
 #board is drawn
