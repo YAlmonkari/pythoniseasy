@@ -7,4 +7,4 @@ The board x-es and o-s is saved as a set of " ", x and o-s.
 I have no idea how to check who won.
 
 My idea is to check last row for xxxx-es, than another but I am stuck.
-Function check makes no sens at all but that is a representation of what I'm trying to do.
+Function check should check for winner.
