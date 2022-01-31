@@ -9,4 +9,4 @@ I have no idea how to check who won.
 My idea is to check last row for xxxx-es, than another but I am stuck.
 Function check should check for winner.
 
-pokker.py - Final Pirple project - card game.
+poker.py - Final Pirple project - card game.
