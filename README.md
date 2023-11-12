@@ -7,4 +7,4 @@ The board x-es and o-s is saved as a set of " ", x and o-s.
 The check function is made with the assist of google AI tool Bard.
 
 poker.py - Final Pirple project - card game.
-Not at all funcional.
+Not at all functional.
