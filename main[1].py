@@ -28,10 +28,11 @@ def emptyBoard(board):
         #columns
         for j in range(7):                 #          |8 |9 |10|11|12|13|14|
             board.append(" ")              #i*7+j+1   |1 |2 |3 |4 |5 |6 |7 |
-#function drawing a connect 4 board (13 rows, 15 columns)
+#win win
 def win(player,board):
 	print("Player",player,"winns!")
 	board4(13,15,board)
+#function drawing a connect 4 board (13 rows, 15 columns)
 def board4(rows, col, board):
     column=0
     #printing (-) dashes
@@ -127,19 +128,16 @@ def check(board, x, player):
         for col in range(4):
             if board[row * 7 + col] == winner and board[row * 7 + col + 1] == winner and board[row * 7 + col + 2] == winner and board[row * 7 + col + 3] == winner:
                 return True
-
     # Check for vertical win
     for col in range(7):
         for row in range(3):
             if board[row * 7 + col] == winner and board[(row + 1) * 7 + col] == winner and board[(row + 2) * 7 + col] == winner and board[(row + 3) * 7 + col] == winner:
                 return True
-
     # Check for diagonal win (top left to bottom right)
     for row in range(3):
         for col in range(4):
             if board[row * 7 + col] == winner and board[(row + 1) * 7 + col + 1] == winner and board[(row + 2) * 7 + col + 2] == winner and board[(row + 3) * 7 + col + 3] == winner:
                 return True
-
     # Check for diagonal win (bottom left to top right)
     for row in range(3, 6):
         for col in range(4):
@@ -152,7 +150,6 @@ def check_for_tie(board):
     return True
 #game starts, empty set is written to disc
 emptyBoard(board)
-	
 #board is drawn
 board4(13,15, board)
 #player 1 starts the game
