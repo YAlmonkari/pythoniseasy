@@ -6,5 +6,7 @@ I have managed to code the game it self (connect 4 by hasbro), -dots (x and o) a
 The board x-es and o-s is saved as a set of " ", x and o-s.
 The check function is made with the assist of google AI tool Bard.
 
-2⁰-poker.py - Final Pirple project - card game.
+2⁰-hangman.py - Hangman game.
+
+3⁰-poker.py - Final Pirple project - card game.
 Not at all functional.
